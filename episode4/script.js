@@ -10,6 +10,7 @@ const feedbackContainer = document.getElementById('feedback');
 let currentQuestion = 0;
 let score = 0;
 let quizData = [];
+let userAnswers = new Array(); // Array to store user's answers
 
 // Fetch quiz data from JSON file
 fetch('quiz_questions.json')
@@ -34,10 +35,22 @@ function displayQuestion() {
     button.addEventListener('click', selectAnswer);
     choicesContainer.appendChild(button);
   });
+
+  // If the user has previously attempted this question, mark it as green
+  if (userAnswers[currentQuestion] !== undefined) {
+    questionPaletteContainer.children[currentQuestion].classList.add('attempted');
+  }
 }
 
 function selectAnswer(event) {
   const selectedChoice = event.target.textContent;
+
+  // Store the user's answer
+  userAnswers[currentQuestion] = selectedChoice;
+
+  // Mark the question in the palette as attempted (green)
+  questionPaletteContainer.children[currentQuestion].classList.add('attempted');
+
   const currentQuizData = quizData[currentQuestion];
 
   if (selectedChoice === currentQuizData.correctAnswer) {
@@ -72,6 +85,12 @@ function displayQuestionPalette() {
     button.textContent = index + 1;
     button.classList.add('palette-button');
     button.addEventListener('click', () => navigateToQuestion(index));
+
+    // Mark questions not yet attempted as red
+    if (userAnswers[index] === undefined) {
+      button.classList.add('unattempted');
+    }
+
     questionPaletteContainer.appendChild(button);
   });
 }

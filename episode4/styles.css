@@ -38,3 +38,19 @@ body {
   font-weight: bold;
   margin-top: 10px;
 }
+
+.palette-button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.palette-button.unattempted {
+  background-color: red;
+}
+
+.palette-button.attempted {
+  background-color: green;
+}

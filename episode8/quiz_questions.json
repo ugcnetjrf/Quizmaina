@@ -1,0 +1,17 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "choices": ["Paris", "London", "Berlin", "Madrid"],
+    "correctAnswer": "Paris"
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "choices": ["Earth", "Mars", "Jupiter", "Mercury"],
+    "correctAnswer": "Mars"
+  },
+  {
+    "question": "Who wrote the famous play 'Romeo and Juliet'?",
+    "choices": ["William Shakespeare", "Jane Austen", "Charles Dickens", "Leo Tolstoy"],
+    "correctAnswer": "William Shakespeare"
+  }
+]

@@ -110,7 +110,7 @@ function showResults() {
   });
 
   // Calculate score
-  score = totalCorrectAnswers * 3 - totalIncorrectAnswers;
+  score = totalCorrectAnswers * 2 - totalIncorrectAnswers*0;
 
   // Ensure score is not negative
   score = Math.max(score, 0);
@@ -143,9 +143,9 @@ function showResults() {
 function getFeedbackMessage(score) {
   if (score === 0) {
     return "You scored zero. Better luck next time!";
-  } else if (score < 10) {
+  } else if (score < 4) {
     return "You need more practice. Keep trying!";
-  } else if (score < 20) {
+  } else if (score < 6) {
     return "You're getting there. Keep up the good work!";
   } else {
     return "Congratulations! You did great!";

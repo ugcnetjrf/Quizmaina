@@ -88,6 +88,18 @@ function markForReview() {
   }
 }
 
+function confirmSubmission() {
+  const confirmation = confirm("Are you sure you want to submit?");
+  if (confirmation) {
+    showResults();
+  }
+}
+
+submitButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  confirmSubmission();
+});
+
 function showResults() {
   quizContainer.style.display = 'none';
 
@@ -175,8 +187,3 @@ nextButton.addEventListener('click', () => {
 });
 
 markForReviewButton.addEventListener('click', markForReview);
-
-submitButton.addEventListener('click', function(event) {
-  event.preventDefault();
-  showResults();
-});

@@ -1,0 +1,89 @@
+/* Styles for the quiz */
+#quiz {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#question {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#choices {
+  margin-bottom: 20px;
+}
+
+#choices div {
+  margin-bottom: 10px;
+}
+
+#buttons {
+  text-align: center;
+}
+
+button {
+  margin: 0 5px;
+}
+
+/* Styles for the question palette */
+#questionPalette {
+  margin-top: 20px;
+}
+
+.palette-button {
+  margin-right: 5px;
+}
+
+.palette-button.unattempted {
+  background-color: red;
+}
+
+.palette-button.attempted {
+  background-color: green;
+}
+
+.palette-button.review {
+  background-color: yellow;
+}
+
+/* Styles for the feedback */
+.hidden {
+  display: none;
+}
+
+.dialog-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+.dialog-box h2 {
+  margin-top: 0;
+}
+
+.dialog-box p {
+  margin-bottom: 10px;
+}
+
+.dialog-box button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dialog-box button:hover {
+  background-color: #0056b3;
+}

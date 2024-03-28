@@ -1,17 +1,22 @@
 [
   {
-    "question": "What is the capital of France?",
-    "choices": ["Paris", "London", "Berlin", "Madrid"],
-    "correctAnswer": "Paris"
+    "question": "Look at this series: 36, 34, 30, 28, 24, ... What number should come next?",
+    "choices": ["20", "22", "23", "26"],
+    "correctAnswer": "20"
   },
   {
-    "question": "Which planet is known as the Red Planet?",
-    "choices": ["Earth", "Mars", "Jupiter", "Mercury"],
-    "correctAnswer": "Mars"
+    "question": "Look at this series: 80, 10, 70, 15, 60, ... What number should come next?",
+    "choices": ["20", "25", "30", "50"],
+    "correctAnswer": "20"
   },
   {
-    "question": "Who wrote the famous play 'Romeo and Juliet'?",
-    "choices": ["William Shakespeare", "Jane Austen", "Charles Dickens", "Leo Tolstoy"],
-    "correctAnswer": "William Shakespeare"
+    "question": "A vendor bought toffees at 6 for a rupee. How many for a rupee must he sell to gain 20%?",
+    "choices": ["3", "4", "5", "6"],
+    "correctAnswer": "5"
+  },
+  {
+    "question": "A vendor bought toffees at 6 for a rupee. How many for a rupee must he sell to gain 20%?",
+    "choices": ["3", "4", "5", "6"],
+    "correctAnswer": "5"
   }
 ]

@@ -176,4 +176,8 @@ nextButton.addEventListener('click', () => {
 
 markForReviewButton.addEventListener('click', markForReview);
 
-submitButton.addEventListener('click', showResults);
+submitButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  showResults();
+});
+

@@ -142,7 +142,7 @@ function displayQuestionPalette() {
     button.classList.add('palette-button');
     button.addEventListener('click', () => navigateToQuestion(index));
 
-    // Mark questions not yet attempted as yellow
+    // Mark questions not yet attempted as red
     if (userAnswers[index] === undefined) {
       button.classList.add('unattempted');
     }

@@ -103,9 +103,13 @@ function showResults() {
   // Calculate total correct and incorrect answers
   userAnswers.forEach((answer, index) => {
     if (answer !== undefined && quizData[index].correctAnswer === quizData[index].choices[answer]) {
-      totalCorrectAnswers++;
+      if (!questionsForReview.has(index)) {
+        totalCorrectAnswers++;
+      }
     } else if (answer !== undefined) {
-      totalIncorrectAnswers++;
+      if (!questionsForReview.has(index)) {
+        totalIncorrectAnswers++;
+      }
     }
   });
 
@@ -123,21 +127,47 @@ function showResults() {
   dialogBox.classList.add('dialog-box');
   dialogBox.innerHTML = `
     <h2>Quiz Results</h2>
-    <p>Your total score: ${score}</p>
-    <p>Total correct answers: ${totalCorrectAnswers}</p>
-    <p>Total incorrect answers: ${totalIncorrectAnswers}</p>
-    <p>${feedbackMessage}</p>
+    <div id="score-feedback">
+      <p>Your total score: ${score}</p>
+      <p>Total correct answers: ${totalCorrectAnswers}</p>
+      <p>Total incorrect answers: ${totalIncorrectAnswers}</p>
+      <p>${feedbackMessage}</p>
+    </div>
+    <div id="correct-incorrect-feedback"></div>
     <button id="close-dialog">Close</button>
   `;
   
   // Append dialog box to body
   document.body.appendChild(dialogBox);
 
+  // Show correct and incorrect feedback
+  const correctIncorrectFeedback = document.getElementById('correct-incorrect-feedback');
+  correctIncorrectFeedback.innerHTML = getCorrectIncorrectFeedback();
+
   // Add event listener to close dialog box
   const closeButton = document.getElementById('close-dialog');
   closeButton.addEventListener('click', function() {
     dialogBox.remove();
   });
+}
+
+function getCorrectIncorrectFeedback() {
+  let correctFeedback = '<p>Questions attempted correctly:</p><ul>';
+  let incorrectFeedback = '<p>Questions attempted incorrectly:</p><ul>';
+  userAnswers.forEach((answer, index) => {
+    if (answer !== undefined && quizData[index].correctAnswer === quizData[index].choices[answer]) {
+      if (!questionsForReview.has(index)) {
+        correctFeedback += `<li>${quizData[index].question}</li>`;
+      }
+    } else if (answer !== undefined) {
+      if (!questionsForReview.has(index)) {
+        incorrectFeedback += `<li>${quizData[index].question}</li>`;
+      }
+    }
+  });
+  correctFeedback += '</ul>';
+  incorrectFeedback += '</ul>';
+  return correctFeedback + incorrectFeedback;
 }
 
 function getFeedbackMessage(score) {
@@ -163,39 +193,31 @@ function displayQuestionPalette() {
   quizData.forEach((question, index) => {
     const button = document.createElement('button');
     button.textContent = index + 1;
-    button.classList.add('palette-button');
-    button.addEventListener('click', () => navigateToQuestion(index));
-
-    // Mark questions not yet attempted as red
-    if (userAnswers[index] === undefined) {
-      button.classList.add('unattempted');
-    }
-
-    // If the question is marked for review, mark it as yellow
-    if (questionsForReview.has(index)) {
-      button.classList.add('review');
-    }
-
+    button.classList.add('palette-button', 'unattempted');
+    button.addEventListener('click', () => {
+      currentQuestion = index;
+      displayQuestion();
+    });
     questionPaletteContainer.appendChild(button);
   });
 }
 
-function navigateToQuestion(index) {
-  currentQuestion = index;
-  displayQuestion();
-  updateButtons();
-}
-
-prevButton.addEventListener('click', () => {
+prevButton.addEventListener('click', function() {
   currentQuestion--;
   displayQuestion();
-  updateButtons();
 });
 
-nextButton.addEventListener('click', () => {
+nextButton.addEventListener('click', function() {
   currentQuestion++;
   displayQuestion();
-  updateButtons();
 });
 
-markForReviewButton.addEventListener('click', markForReview);
+markForReviewButton.addEventListener('click', function() {
+  markForReview();
+});
+
+function startQuiz() {
+  quizContainer.style.display = 'block';
+}
+
+// Other existing code...

@@ -49,14 +49,17 @@ button {
 
 .palette-button.unattempted {
   background-color: red;
+  color:white;
 }
 
 .palette-button.attempted {
   background-color: green;
+  color:white;
 }
 
 .palette-button.review {
   background-color: yellow;
+  color:green;
 }
 
 /* Styles for the feedback */

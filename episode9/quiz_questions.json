@@ -25,7 +25,7 @@
     "correctAnswer": "Syllogism"
   },
   {
-    "question": "Pointing towards a man, a woman said, "His wife's father is the husband of my mother's only daughter. How is the woman related to the man?"",
+    "question": "Pointing towards a man, a woman said - His wife's father is the husband of my mother's only daughter. How is the woman related to the man?",
     "choices": ["Daughter", "Sister-in-Law", "Sister", "Mother-in-Law"],
     "correctAnswer": "Mother-in-Law"
   },

@@ -53,6 +53,16 @@
     "question": "A shopkeeper sells a refrigerator for Rs 22,000 and makes a profit of 10%. If he desires to make a profit of 18%, what should be his selling price?",
     "choices": ["23,600", "29,600", "36,000", "24,600"],
     "correctAnswer": "23,600"
+  },
+  {
+    "question": " In which of the following arguments 'the relation that exists between premises and conclusion is that of logical necessity' ?",
+    "choices": ["Inductive", "Deductive", "Demonstrative", "Analogical"],
+    "correctAnswer": "Deductive"
+  },
+  {
+    "question": " If x and y are two positive numbers and x is 25% greater than y, what is the value of the ratio y/x ",
+    "choices": ["0.75", "0.80", "1.20", "1.25"],
+    "correctAnswer": "0.80"
   }
   
 ]

@@ -15,8 +15,38 @@
     "correctAnswer": "5"
   },
   {
-    "question": "A vendor bought toffees at 6 for a rupee. How many for a rupee must he sell to gain 20%?",
-    "choices": ["3", "4", "5", "6"],
-    "correctAnswer": "5"
+    "question": "Which of the number would occur next in the series - 2,6,30,60,130,210",
+    "choices": ["330", "350", "370", "380"],
+    "correctAnswer": "350"
+  },
+  {
+    "question": "Which one of the following is not a part of immediate deductive inference",
+    "choices": ["Conversion", "Obversion", "Syllogism", "Contraposition"],
+    "correctAnswer": "Syllogism"
+  },
+  {
+    "question": "Pointing towards a man, a woman said, "His wife's father is the husband of my mother's only daughter. How is the woman related to the man?",
+    "choices": ["Daughter", "Sister-in-Law", "Sister", "Mother-in-Law"],
+    "correctAnswer": "Mother-in-Law"
+  },
+  {
+    "question": "Assumption of an unperceived fact in order to reconcile two apparently inconsistent perceived facts is known in Indian logic as :",
+    "choices": ["Anumana (inference)", "Upamana (Comparison)", "Arthapatti (implication)", "Anupalabdhi (Non-apprehension)"],
+    "correctAnswer": "Arthapatti (implication)"
+  },
+  {
+    "question": "If income of X is 20% more than that of Y and income of Y is 25% less than that of Z, then the total income of X,Y and Z are in which of the following ratios?",
+    "choices": ["18:15:20", "18:15:10", "18:10:15", "18:12:15"],
+    "correctAnswer": "18:15:20"
+  },
+  {
+    "question": " Identify the term X in the following series- 3,2,11,14,27,34,51, X",
+    "choices": ["62", "69", "60", "71"],
+    "correctAnswer": "62"
+  },
+  {
+    "question": " The Smallest integer greater than 1 which is simultaneously a square and a cube of certain integers is ",
+    "choices": ["8", "9", "36", "64"],
+    "correctAnswer": "64"
   }
 ]

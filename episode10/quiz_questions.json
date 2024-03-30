@@ -63,6 +63,16 @@
     "question": " If x and y are two positive numbers and x is 25% greater than y, what is the value of the ratio y/x ",
     "choices": ["0.75", "0.80", "1.20", "1.25"],
     "correctAnswer": "0.80"
+  },
+  {
+    "question": " During one year, the population of a town increased by 5% and during the next year, the population decreased by 5%. If the total population is 29925 at the end of second year, then what was the population size in the beginning of the first year ? ",
+    "choices": ["25000", "30000", "33000", "36000"],
+    "correctAnswer": "30000"
+  },
+  {
+    "question": " Consider the example - There is no jar now on the ground. Identify the means of Knowledge (pramana) ",
+    "choices": ["0.75", "0.80", "1.20", "1.25"],
+    "correctAnswer": "0.80"
   }
   
 ]

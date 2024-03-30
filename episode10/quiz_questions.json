@@ -70,9 +70,9 @@
     "correctAnswer": "30000"
   },
   {
-    "question": " Consider the example - There is no jar now on the ground. Identify the means of Knowledge (pramana) ",
-    "choices": ["0.75", "0.80", "1.20", "1.25"],
-    "correctAnswer": "0.80"
+    "question": " Consider the example - 'There is no jar now on the ground'. Identify the means of Knowledge (pramana) involved in the example from the options given below",
+    "choices": ["Anupalabdhi", "Arthapatti", "Pratyaksha", "Anumana"],
+    "correctAnswer": "Anupalabdhi"
   }
   
 ]
